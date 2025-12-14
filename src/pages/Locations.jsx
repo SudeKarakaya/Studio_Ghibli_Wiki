@@ -1,5 +1,6 @@
 import useFetch from "../fetch/Fetch";
 import { useEffect, useState } from "react";
+import { base_url } from "../fetch/API";
 
 const Locations = () => {
 
