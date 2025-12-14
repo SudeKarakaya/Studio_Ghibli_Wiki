@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 const Locations = () => {
 
   // Fetch locations from api
-  const [locations, loading, error] = useFetch("/api/locations");
+  const [locations, loading, error] = useFetch("/locations");
   const [filmsMap, setFilmsMap] = useState({});
 
   // When locations are shown on the page, fetches related films and stores them
@@ -23,7 +23,7 @@ const Locations = () => {
     // Gets film data by id
     Promise.all(
       filmIds.map((id) =>
-        fetch(`/api/films/${id}`)
+        fetch(`${base_url}/films/${id}`)
           .then((res) => res.json())
           .then((data) => ({ id, data }))
       )

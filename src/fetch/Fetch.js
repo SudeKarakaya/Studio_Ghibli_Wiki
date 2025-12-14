@@ -1,14 +1,16 @@
 import { useState, useEffect } from "react";
+import { base_url } from "./API";
 
 
 // React hook for fetching data
-const useFetch = (url) => {
+const useFetch = (endpoint) => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch(url)
+    setLoading(true);
+    fetch(`${base_url}${endpoint}`)
       .then((res) => {
         // Throws an error message
         if (!res.ok) {
@@ -26,7 +28,7 @@ const useFetch = (url) => {
         setError(err.message);
         setLoading(false);
       });
-  }, [url]);
+  }, [endpoint]);
 
   return [data, loading, error];
 };

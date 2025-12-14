@@ -7,7 +7,7 @@ const items = 10;
 
 const Characters = () => {
   // Fetch characters from api
-  const [people, loading, error] = useFetch("/api/people");
+  const [people, loading, error] = useFetch("/people");
 
   const [input, setInput] = useState("");
   const [query, setQuery] = useState("");

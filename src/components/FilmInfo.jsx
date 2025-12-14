@@ -14,7 +14,7 @@ const FilmInfo = ({ filmUrl }) => {
     const filmId = filmUrl.split("/").pop();
 
     // Fetch film info by id
-    fetch(`/api/films/${filmId}`)
+    fetch(`https://ghibliapi.vercel.app/films/${filmId}`)
       .then((res) => res.json())
       .then((data) => setFilm(data))
       .catch((err) => {

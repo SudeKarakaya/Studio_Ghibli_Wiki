@@ -5,7 +5,7 @@ const FilmDetails = () => {
   // Get film id
   const { id } = useParams();
   // Fetch film details with id
-  const [film, loading, error] = useFetch(`/api/films/${id}`);
+  const [film, loading, error] = useFetch(`/films/${id}`);
 
   // Loading
   if (loading) return <p className="p-6 bg-[#7bb591] border-[#7bb591] text-[#0b5b2a]">Loading…</p>;

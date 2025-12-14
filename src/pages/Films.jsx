@@ -4,7 +4,7 @@ import { useState, useTransition } from "react";
 
 const Films = () => {
   // Fetch films from api
-  const [films, loading, error] = useFetch("/api/films");
+  const [films, loading, error] = useFetch("/films");
   
   // For navigation to film details page
   const navigate = useNavigate(); 
