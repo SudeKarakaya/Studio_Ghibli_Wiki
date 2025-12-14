@@ -20,3 +20,6 @@ The application is built with React, Vite, and Tailwind CSS, focusing on clean U
 - Tailwind CSS
 - Fetch API
 
+
+## Live Demo
+https://studio-ghibli-wikisite.vercel.app
